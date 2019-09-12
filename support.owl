@@ -1,0 +1,655 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY customersupport "http://www.semanticweb.org/xavier/ontologies/2019/8/customersupport#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/xavier/ontologies/2019/8/customersupport#"
+     xml:base="http://www.semanticweb.org/xavier/ontologies/2019/8/customersupport"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:customersupport="http://www.semanticweb.org/xavier/ontologies/2019/8/customersupport#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/xavier/ontologies/2019/8/customersupport"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/xavier/ontologies/2019/8/customersupport#can&apos;tSignIn -->
+
+    <owl:ObjectProperty rdf:about="&customersupport;can&apos;tSignIn">
+        <rdfs:domain rdf:resource="&customersupport;Customer"/>
+        <rdfs:range rdf:resource="&customersupport;SignIn"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xavier/ontologies/2019/8/customersupport#cantRequestRide -->
+
+    <owl:ObjectProperty rdf:about="&customersupport;cantRequestRide">
+        <rdfs:domain rdf:resource="&customersupport;Customer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xavier/ontologies/2019/8/customersupport#declinePayment -->
+
+    <owl:ObjectProperty rdf:about="&customersupport;declinePayment"/>
+    
+
+
+    <!-- http://www.semanticweb.org/xavier/ontologies/2019/8/customersupport#receveVerificationCode -->
+
+    <owl:ObjectProperty rdf:about="&customersupport;receveVerificationCode"/>
+    
+
+
+    <!-- http://www.semanticweb.org/xavier/ontologies/2019/8/customersupport#resetPassword -->
+
+    <owl:ObjectProperty rdf:about="&customersupport;resetPassword"/>
+    
+
+
+    <!-- http://www.semanticweb.org/xavier/ontologies/2019/8/customersupport#resetPasswordLink -->
+
+    <owl:ObjectProperty rdf:about="&customersupport;resetPasswordLink"/>
+    
+
+
+    <!-- http://www.semanticweb.org/xavier/ontologies/2019/8/customersupport#troubleshootTwoStepVerification -->
+
+    <owl:ObjectProperty rdf:about="&customersupport;troubleshootTwoStepVerification">
+        <rdfs:range rdf:resource="&customersupport;2StepVerification"/>
+        <rdfs:domain rdf:resource="&customersupport;Customer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xavier/ontologies/2019/8/customersupport#turnOffTwoStepVerification -->
+
+    <owl:ObjectProperty rdf:about="&customersupport;turnOffTwoStepVerification"/>
+    
+
+
+    <!-- http://www.semanticweb.org/xavier/ontologies/2019/8/customersupport#turnOnTwoStepVerification -->
+
+    <owl:ObjectProperty rdf:about="&customersupport;turnOnTwoStepVerification"/>
+    
+
+
+    <!-- http://www.semanticweb.org/xavier/ontologies/2019/8/customersupport#useBackupCode -->
+
+    <owl:ObjectProperty rdf:about="&customersupport;useBackupCode"/>
+    
+
+
+    <!-- http://www.semanticweb.org/xavier/ontologies/2019/8/customersupport#verifyTwoStep -->
+
+    <owl:ObjectProperty rdf:about="&customersupport;verifyTwoStep"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/xavier/ontologies/2019/8/customersupport#answer -->
+
+    <owl:DatatypeProperty rdf:about="&customersupport;answer">
+        <rdfs:domain rdf:resource="&customersupport;AccountAndPayment"/>
+        <rdfs:domain rdf:resource="&customersupport;Guide"/>
+        <rdfs:domain rdf:resource="&customersupport;Person"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/xavier/ontologies/2019/8/customersupport#2StepVerification -->
+
+    <owl:Class rdf:about="&customersupport;2StepVerification">
+        <rdfs:subClassOf rdf:resource="&customersupport;Can&apos;tSignOrRequestRide"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xavier/ontologies/2019/8/customersupport#Accesability -->
+
+    <owl:Class rdf:about="&customersupport;Accesability"/>
+    
+
+
+    <!-- http://www.semanticweb.org/xavier/ontologies/2019/8/customersupport#AccountAndPayment -->
+
+    <owl:Class rdf:about="&customersupport;AccountAndPayment"/>
+    
+
+
+    <!-- http://www.semanticweb.org/xavier/ontologies/2019/8/customersupport#AfterRide -->
+
+    <owl:Class rdf:about="&customersupport;AfterRide">
+        <rdfs:subClassOf rdf:resource="&customersupport;Guide"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xavier/ontologies/2019/8/customersupport#AppDownload -->
+
+    <owl:Class rdf:about="&customersupport;AppDownload">
+        <rdfs:subClassOf rdf:resource="&customersupport;SigningUp"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xavier/ontologies/2019/8/customersupport#BackupCode -->
+
+    <owl:Class rdf:about="&customersupport;BackupCode">
+        <rdfs:subClassOf rdf:resource="&customersupport;2StepVerification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xavier/ontologies/2019/8/customersupport#BusinessTravel -->
+
+    <owl:Class rdf:about="&customersupport;BusinessTravel">
+        <rdfs:subClassOf rdf:resource="&customersupport;AccountAndPayment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xavier/ontologies/2019/8/customersupport#Can&apos;tSignOrRequestRide -->
+
+    <owl:Class rdf:about="&customersupport;Can&apos;tSignOrRequestRide">
+        <rdfs:subClassOf rdf:resource="&customersupport;AccountAndPayment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xavier/ontologies/2019/8/customersupport#ChangeAccountSettings -->
+
+    <owl:Class rdf:about="&customersupport;ChangeAccountSettings">
+        <rdfs:subClassOf rdf:resource="&customersupport;AccountAndPayment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xavier/ontologies/2019/8/customersupport#CreateAccount -->
+
+    <owl:Class rdf:about="&customersupport;CreateAccount">
+        <rdfs:subClassOf rdf:resource="&customersupport;SigningUp"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xavier/ontologies/2019/8/customersupport#Customer -->
+
+    <owl:Class rdf:about="&customersupport;Customer">
+        <rdfs:subClassOf rdf:resource="&customersupport;Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xavier/ontologies/2019/8/customersupport#Driver -->
+
+    <owl:Class rdf:about="&customersupport;Driver">
+        <rdfs:subClassOf rdf:resource="&customersupport;Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xavier/ontologies/2019/8/customersupport#GeneralIssue -->
+
+    <owl:Class rdf:about="&customersupport;GeneralIssue">
+        <rdfs:subClassOf rdf:resource="&customersupport;Accesability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xavier/ontologies/2019/8/customersupport#Guide -->
+
+    <owl:Class rdf:about="&customersupport;Guide"/>
+    
+
+
+    <!-- http://www.semanticweb.org/xavier/ontologies/2019/8/customersupport#LegalPolicyInquaries -->
+
+    <owl:Class rdf:about="&customersupport;LegalPolicyInquaries">
+        <rdfs:subClassOf rdf:resource="&customersupport;More"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xavier/ontologies/2019/8/customersupport#More -->
+
+    <owl:Class rdf:about="&customersupport;More"/>
+    
+
+
+    <!-- http://www.semanticweb.org/xavier/ontologies/2019/8/customersupport#Other -->
+
+    <owl:Class rdf:about="&customersupport;Other"/>
+    
+
+
+    <!-- http://www.semanticweb.org/xavier/ontologies/2019/8/customersupport#OutstandingPayment -->
+
+    <owl:Class rdf:about="&customersupport;OutstandingPayment">
+        <rdfs:subClassOf rdf:resource="&customersupport;Can&apos;tSignOrRequestRide"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xavier/ontologies/2019/8/customersupport#PasswordReset -->
+
+    <owl:Class rdf:about="&customersupport;PasswordReset">
+        <rdfs:subClassOf rdf:resource="&customersupport;Can&apos;tSignOrRequestRide"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xavier/ontologies/2019/8/customersupport#PasswordResetLink -->
+
+    <owl:Class rdf:about="&customersupport;PasswordResetLink">
+        <rdfs:subClassOf rdf:resource="&customersupport;Can&apos;tSignOrRequestRide"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xavier/ontologies/2019/8/customersupport#PaymentDecline -->
+
+    <owl:Class rdf:about="&customersupport;PaymentDecline">
+        <rdfs:subClassOf rdf:resource="&customersupport;Can&apos;tSignOrRequestRide"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xavier/ontologies/2019/8/customersupport#PaymentOptions -->
+
+    <owl:Class rdf:about="&customersupport;PaymentOptions">
+        <rdfs:subClassOf rdf:resource="&customersupport;AccountAndPayment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xavier/ontologies/2019/8/customersupport#Person -->
+
+    <owl:Class rdf:about="&customersupport;Person"/>
+    
+
+
+    <!-- http://www.semanticweb.org/xavier/ontologies/2019/8/customersupport#RequestingRide -->
+
+    <owl:Class rdf:about="&customersupport;RequestingRide">
+        <rdfs:subClassOf rdf:resource="&customersupport;Guide"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xavier/ontologies/2019/8/customersupport#RideRequest -->
+
+    <owl:Class rdf:about="&customersupport;RideRequest">
+        <rdfs:subClassOf rdf:resource="&customersupport;Can&apos;tSignOrRequestRide"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xavier/ontologies/2019/8/customersupport#SignIn -->
+
+    <owl:Class rdf:about="&customersupport;SignIn">
+        <rdfs:subClassOf rdf:resource="&customersupport;Can&apos;tSignOrRequestRide"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xavier/ontologies/2019/8/customersupport#SignUp -->
+
+    <owl:Class rdf:about="&customersupport;SignUp">
+        <rdfs:subClassOf rdf:resource="&customersupport;SigningUp"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xavier/ontologies/2019/8/customersupport#SigningUp -->
+
+    <owl:Class rdf:about="&customersupport;SigningUp"/>
+    
+
+
+    <!-- http://www.semanticweb.org/xavier/ontologies/2019/8/customersupport#TakingRide -->
+
+    <owl:Class rdf:about="&customersupport;TakingRide">
+        <rdfs:subClassOf rdf:resource="&customersupport;Guide"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xavier/ontologies/2019/8/customersupport#TalkBack -->
+
+    <owl:Class rdf:about="&customersupport;TalkBack">
+        <rdfs:subClassOf rdf:resource="&customersupport;Accesability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xavier/ontologies/2019/8/customersupport#Troubleshooting -->
+
+    <owl:Class rdf:about="&customersupport;Troubleshooting">
+        <rdfs:subClassOf rdf:resource="&customersupport;2StepVerification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xavier/ontologies/2019/8/customersupport#TurnOff -->
+
+    <owl:Class rdf:about="&customersupport;TurnOff">
+        <rdfs:subClassOf rdf:resource="&customersupport;2StepVerification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xavier/ontologies/2019/8/customersupport#TurnOn -->
+
+    <owl:Class rdf:about="&customersupport;TurnOn">
+        <rdfs:subClassOf rdf:resource="&customersupport;2StepVerification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xavier/ontologies/2019/8/customersupport#UberAtAirport -->
+
+    <owl:Class rdf:about="&customersupport;UberAtAirport">
+        <rdfs:subClassOf rdf:resource="&customersupport;More"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xavier/ontologies/2019/8/customersupport#UberForBusinessTravel -->
+
+    <owl:Class rdf:about="&customersupport;UberForBusinessTravel">
+        <rdfs:subClassOf rdf:resource="&customersupport;More"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xavier/ontologies/2019/8/customersupport#UberForDelivery -->
+
+    <owl:Class rdf:about="&customersupport;UberForDelivery">
+        <rdfs:subClassOf rdf:resource="&customersupport;More"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xavier/ontologies/2019/8/customersupport#UnknownCharge -->
+
+    <owl:Class rdf:about="&customersupport;UnknownCharge">
+        <rdfs:subClassOf rdf:resource="&customersupport;AccountAndPayment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xavier/ontologies/2019/8/customersupport#UsePromesAndCredits -->
+
+    <owl:Class rdf:about="&customersupport;UsePromesAndCredits">
+        <rdfs:subClassOf rdf:resource="&customersupport;AccountAndPayment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xavier/ontologies/2019/8/customersupport#VerificationMethods -->
+
+    <owl:Class rdf:about="&customersupport;VerificationMethods">
+        <rdfs:subClassOf rdf:resource="&customersupport;2StepVerification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xavier/ontologies/2019/8/customersupport#VoiceOver -->
+
+    <owl:Class rdf:about="&customersupport;VoiceOver">
+        <rdfs:subClassOf rdf:resource="&customersupport;Accesability"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/xavier/ontologies/2019/8/customersupport#2StepVerification -->
+
+    <owl:NamedIndividual rdf:about="&customersupport;2StepVerification">
+        <rdf:type rdf:resource="&customersupport;2StepVerification"/>
+        <answer>Uber&apos;s security systems monitor your account around the clock for suspicious activity. If we detect a new device accessing your account, we may require additional steps before you can login.
+
+If you choose to enable 2-step verification, a one-time verification code in addition to your password will be required every time you sign into your Uber account.
+
+You can choose to receive your one-time verification code via text message from Uber or generated by a 3rd party security app like Duo Mobile or Google Authenticator.</answer>
+        <resetPasswordLink rdf:resource="&customersupport;2StepVerification"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xavier/ontologies/2019/8/customersupport#backupCode -->
+
+    <owl:NamedIndividual rdf:about="&customersupport;backupCode">
+        <rdf:type rdf:resource="&customersupport;BackupCode"/>
+        <answer>Backup codes can be used to recover your account if you are unable to receive a verification code via text message or generate a code from your security app. Backup codes can be accessed through settings at any time.
+
+We encourage you to save your backup codes after setting up 2-step verification and storing them in a safe place. If you lose your phone and need to access your account, backup codes will help in regaining access.
+
+To use a backup code at sign in:
+- Go to &quot;I&apos;m having trouble&quot; on the screen where you would normally enter in your verification code
+- Select &quot;Use backup code&quot; to enter the code.
+
+IMPORTANT - Backup codes can only be used to sign in once. Once a backup code has been used, it will no longer work. Eight backup codes are available at a time. If you end up using all of them, you can refresh the list to generate new codes
+
+If you do not have access to your backup codes, please let us know at the &quot;I can&apos;t sign in to my account&quot; link and we&apos;ll help you recover your account.</answer>
+        <resetPasswordLink rdf:resource="&customersupport;backupCode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xavier/ontologies/2019/8/customersupport#outstandingPayment -->
+
+    <owl:NamedIndividual rdf:about="&customersupport;outstandingPayment">
+        <rdf:type rdf:resource="&customersupport;OutstandingPayment"/>
+        <answer>f a charge from Uber is declined, you may see a &quot;Payment&quot; card in your Uber feed.
+
+Your app will ask you to charge your outstanding balance to a payment method of your choice before requesting a ride.
+
+To pay an outstanding balance:
+
+1. Tap the card on your feed.
+2. Select &quot;View Payment options.&quot; Select payment type. Note: You may need to update your payment method(s).
+
+You can also choose to pay cash for the balance on your next cash ride. To pay cash, select &quot;Pay in cash to next driver&quot; and then &quot;Confirm.&quot; Your outstanding balance will be added to your next trip fare.</answer>
+        <resetPasswordLink rdf:resource="&customersupport;outstandingPayment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xavier/ontologies/2019/8/customersupport#passwordResetLink -->
+
+    <owl:NamedIndividual rdf:about="&customersupport;passwordResetLink">
+        <rdf:type rdf:resource="&customersupport;PasswordResetLink"/>
+        <answer>Once you&apos;ve requested a link to reset your password, you should receive an email within a few minutes.
+
+The email contains the reset password link. To keep your account secure, the link expires after 10 minutes.
+
+If the link doesn&apos;t work or if you never received one, visit uber.com/forgot-password to request another link. Make sure you&apos;re entering your email correctly.</answer>
+        <resetPasswordLink rdf:resource="&customersupport;passwordResetLink"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xavier/ontologies/2019/8/customersupport#passwordRest -->
+
+    <owl:NamedIndividual rdf:about="&customersupport;passwordRest">
+        <rdf:type rdf:resource="&customersupport;PasswordReset"/>
+        <answer>If you forget your password, visit the link below to reset. You&apos;ll need to enter the email address or mobile number associated with your Uber account.
+
+You&apos;ll receive an email in a few minutes. This email includes a link to reset your password. The link can only be used once. If you do not open the link within 10 minutes, start over to receive a new link.
+
+It&apos;s good practice to create a unique password for Uber. Be careful not to share your password in emails or other communication. Uber support will never ask you for your password.
+</answer>
+        <resetPassword rdf:resource="&customersupport;passwordRest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xavier/ontologies/2019/8/customersupport#paymentDecline -->
+
+    <owl:NamedIndividual rdf:about="&customersupport;paymentDecline">
+        <rdf:type rdf:resource="&customersupport;PaymentDecline"/>
+        <answer>If you see any of the error messages below in your app, you won&apos;t be able to request a ride until you update your payment method:
+
+- &quot;Request Failed: Card Declined&quot;
+- &quot;Your payment method is invalid. Please update your billing settings&quot;
+- &quot;There was an error processing your request&quot;
+
+Update or add a new payment method in the &quot;Payment&quot; section of the app menu if your payment method was declined for one of the reasons below:
+
+- Card number entered is incorrect
+- Credit or debit card has expired
+- Insufficient funds in the account</answer>
+        <resetPasswordLink rdf:resource="&customersupport;paymentDecline"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xavier/ontologies/2019/8/customersupport#requestRide -->
+
+    <owl:NamedIndividual rdf:about="&customersupport;requestRide">
+        <rdf:type rdf:resource="&customersupport;RideRequest"/>
+        <answer>If you can&apos;t request a ride, it could be for a few reasons:
+
+-You have an outstanding payment.
+-Your payment method was declined on a previous trip.
+-Uber is currently unavailable in your location.
+-There aren&apos;t any drivers in your area at this time. Please wait and try requesting again.
+-You haven&apos;t confirmed your email or phone number. Check for verification messages from Uber. If you don&apos;t have any, you may need to update your account settings.
+
+Select your situation from the links below to get more information.</answer>
+        <cantRequestRide rdf:resource="&customersupport;requestRide"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xavier/ontologies/2019/8/customersupport#requestRideBeginer -->
+
+    <owl:NamedIndividual rdf:about="&customersupport;requestRideBeginer">
+        <rdf:type rdf:resource="&customersupport;Guide"/>
+        <answer>I am new</answer>
+        <cantRequestRide rdf:resource="&customersupport;requestRideBeginer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xavier/ontologies/2019/8/customersupport#signInToAccount -->
+
+    <owl:NamedIndividual rdf:about="&customersupport;signInToAccount">
+        <rdf:type rdf:resource="&customersupport;SignIn"/>
+        <answer>If you can&apos;t sign in to your account because you forgot your password, click the link to reset your password.</answer>
+        <resetPasswordLink rdf:resource="&customersupport;signInToAccount"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xavier/ontologies/2019/8/customersupport#troubleshootingTwostepVerification -->
+
+    <owl:NamedIndividual rdf:about="&customersupport;troubleshootingTwostepVerification">
+        <rdf:type rdf:resource="&customersupport;Troubleshooting"/>
+        <resetPasswordLink rdf:resource="&customersupport;troubleshootingTwostepVerification"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xavier/ontologies/2019/8/customersupport#turnOffTwoStepVerification -->
+
+    <owl:NamedIndividual rdf:about="&customersupport;turnOffTwoStepVerification">
+        <rdf:type rdf:resource="&customersupport;TurnOff"/>
+        <answer>To turn 2-step verification OFF:
+- Go to Security Settings in the Uber app by tapping on the menu icon in the top-left corner and clicking Settings &gt; Security
+- Tap on 2-step verification
+- Tap on the &quot;TURN OFF&quot; button at the bottom of the screen
+- You will be asked to enter your password and verify your identity for security purposes before you are able to turn it off</answer>
+        <turnOffTwoStepVerification rdf:resource="&customersupport;turnOffTwoStepVerification"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xavier/ontologies/2019/8/customersupport#turnOnTwoStepVerification -->
+
+    <owl:NamedIndividual rdf:about="&customersupport;turnOnTwoStepVerification">
+        <rdf:type rdf:resource="&customersupport;TurnOn"/>
+        <answer>To turn 2-step verification ON:
+- Go to Security Settings in the Uber app by tapping on the menu icon in the top-left corner and clicking Settings &gt; Security
+- Tap on 2-step verification
+- Select your preferred method of verification (text message or 3rd party security app) and follow the on-screen instructions
+
+If you are setting up 2-step verification using an authentication app, you&apos;ll need to download your preferred app first. We recommend using Duo Mobile or Google Authenticator.</answer>
+        <resetPasswordLink rdf:resource="&customersupport;turnOnTwoStepVerification"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/xavier/ontologies/2019/8/customersupport#verificationMethod -->
+
+    <owl:NamedIndividual rdf:about="&customersupport;verificationMethod">
+        <rdf:type rdf:resource="&customersupport;VerificationMethods"/>
+        <answer>Text Message:
+
+Uber will send you a verification code in an SMS text message to the phone number you use to set up 2-step verification. Standard messaging and data rates will apply. Keep in mind, if you are traveling and/or don&apos;t have cell service, you may not be able to receive a verification code via text message.
+
+3rd Party Security App:
+
+Your verification codes will be generated by a 3rd party security app such as Duo Mobile or Google Authenticator. These 3rd party security apps work offline so choosing this method is a great option if you travel frequently or use Uber on a different device than your mobile phone.</answer>
+        <resetPasswordLink rdf:resource="&customersupport;verificationMethod"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
